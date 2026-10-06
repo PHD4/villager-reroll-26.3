@@ -2,7 +2,7 @@ package com.joplayx.client.util;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.AxeItem;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 
@@ -35,7 +35,7 @@ public class  HotbarUtil {
 	public static void selectBestAxe(Player player) {
 		Inventory inv = player.getInventory();
 		for (int i = 0; i < 9; i++) {
-			if (inv.getItem(i).getItem() instanceof AxeItem) {
+			if (inv.getItem(i).is(ItemTags.AXES)) {
 				inv.selected = i;
 				return;
 			}

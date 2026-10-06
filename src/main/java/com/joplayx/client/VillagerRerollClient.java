@@ -14,7 +14,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import com.mojang.blaze3d.platform.InputConstants;
-import org.lwjgl.glfw.GLFW;
 
 public class VillagerRerollClient implements ClientModInitializer {
 
@@ -35,24 +34,24 @@ public class VillagerRerollClient implements ClientModInitializer {
 		// J — Start / Stop
 		startStopKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
 				"key.villager-reroll.start_stop",
-				InputConstants.Type.KEYSYM,
-				GLFW.GLFW_KEY_J,
+				InputConstants.Type.KEYBOARD,
+				InputConstants.KEY_J,
 				CATEGORY
 		));
 
 		// K — Emergency Stop
 		emergencyStopKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
 				"key.villager-reroll.emergency_stop",
-				InputConstants.Type.KEYSYM,
-				GLFW.GLFW_KEY_K,
+				InputConstants.Type.KEYBOARD,
+				InputConstants.KEY_K,
 				CATEGORY
 		));
 
 		// L — Set lectern position to where player is standing
 		setPositionKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
 				"key.villager-reroll.set_position",
-				InputConstants.Type.KEYSYM,
-				GLFW.GLFW_KEY_L,
+				InputConstants.Type.KEYBOARD,
+				InputConstants.KEY_L,
 				CATEGORY
 		));
 
